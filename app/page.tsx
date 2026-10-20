@@ -204,10 +204,11 @@ const InteractivePhotoReveal = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     const bwImg = new Image();
-    bwImg.src = '/img/beforehover-removebg.png';
+    bwImg.src = `${basePath}/img/beforehover-removebg.png`;
     const colorImg = new Image();
-    colorImg.src = '/img/afterhover-removebg.png';
+    colorImg.src = `${basePath}/img/afterhover-removebg.png`;
     bwImgRef.current = bwImg;
     colorImgRef.current = colorImg;
 
